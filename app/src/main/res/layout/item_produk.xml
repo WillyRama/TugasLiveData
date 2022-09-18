@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="produk"
+            type="com.willyramad.topicempatlivedata.DataProduk" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/purple_200"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tvGambar"
+                android:layout_margin="10dp"
+                android:layout_width="100dp"
+                app:imageResource="@{produk.imgProduk}"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/tvProduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvGambar"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@{produk.namaproduk}" />
+
+            <TextView
+                android:id="@+id/tvHarga"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{produk.hargaProcuk}" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
